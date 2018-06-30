@@ -197,6 +197,7 @@ function SnapShotVolume ([string]$Volume, $Location)
             try { $Location.RemoveChild($Location.SelectSingleNode("Snapshot[@Volume='$Volume']")) | Out-Null } catch {}
             if ($XMLSnapshot.ID) { & 'cmd.exe' /c rmdir "$ConfigPath\$($XMLSnapshot.ID)" | Out-Null }
             $s2 = $null
+            
         }
     }
     
